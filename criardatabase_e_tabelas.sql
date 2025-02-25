@@ -6,7 +6,7 @@ CREATE DATABASE CONTROLE_GERAL
 --user banco criado
 USE CONTROLE_GERAL
 
---criação de tabelas
+--cria��o de tabelas
 
 CREATE TABLE ESTOQUE 
 (
@@ -50,29 +50,17 @@ CREATE TABLE CLIENTES
 INSERT INTO CLIENTES
 values
 ('Joao', 22233344452, 'Rua1', 'Masculino', 'Aracaju'),
-('Joao', 22233344452, 'Rua1', 'Masculino', 'São Paulo'),
+('Joao', 22233344452, 'Rua1', 'Masculino', 'S�o Paulo'),
 ('Joao', 22233344452, 'Rua1', 'Masculino', 'Recife'),
 ('Joao', 22233344452, 'Rua1', 'Masculino', 'Salvador')
 
-SELECT * from CLIENTES
+
 
 SELECT * FROM VENDA
 SELECT * FROM ESTOQUE
 SELECT * FROM CLIENTES
 
+-- DELETAR AS TABELAS
 DROP TABLE ESTOQUE
 DROP TABLE VENDA
 DROP TABLE CLIENTES
-
-
---INSERINDO DADOS NAS TABELAS
-
-INSERT INTO ESTOQUE
-values
-(12, 'Caneta', 'Sim', 231231231),
-(55, 'Lapis', 'Sim', 32138678213123),
-(112, 'Caderno', 'Sim', 67867),
-(11, 'Agenda', 'Sim', 123123123)
-
-
-SELECT * FROM ESTOQUE
