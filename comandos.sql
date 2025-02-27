@@ -1,0 +1,57 @@
+
+
+-- SELECT CONDIÇÕES DE TABELAS 
+
+--ALIAS DE TABELAS
+--SELECT LIST
+--FROM
+--WHERE
+--AND
+--BETWEEN
+--IN
+
+--selecionando os registros de toda a tabela(TODAS as colunas)
+SELECT * FROM TB_FLIX
+
+--utilizando o SELECT LIST, trazendo apenas algumas coplunas
+SELECT	DATA, ESTADOS,UF FROM tb_flix
+
+--trazendo colunas na frente ou atras e depois o resto
+SELECT TIPO_DE_CONTA, * FROM tb_flix
+SELECT *, VALOR, * FROM tb_flix
+
+--renomeando colunas
+SELECT VALOR AS [VALOR DE VENDAS], PERIODO_DE_ACESSOS AS 'ACESSOS_USER', TIPO_DE_CONTA AS PLANOS FROM tb_flix
+
+
+--renomeando tabela
+SELECT a.UF, a.DATA, a.SEGMENTOS FROM tb_flix a
+
+
+
+
+--WHERE
+SELECT * FROM tb_flix WHERE SEGMENTOS = 'terror'
+
+
+-- AND
+SELECT * FROM tb_flix WHERE UF = 'CE' AND PERIODO_DE_ACESSOS = 'TARDE'
+
+SELECT * FROM tb_flix WHERE PERIODO_DE_ACESSOS = 'MANHA' AND TIPO_DE_CONTA = 'PLANO PREMIUM'
+AND VALOR = 'R$ 37,90' AND SEGMENTOS = 'AÇÃO' AND UF = 'RJ'
+
+SELECT * FROM tb_flix WHERE UF = 'RJ' AND PERIODO_DE_ACESSOS = 'MANHA'
+
+--BETWEEN
+SELECT * FROM tb_flix 
+WHERE DATA
+BETWEEN '01/01/2019' AND '03/01/2019'
+
+SELECT DATA AS [DATA DA EXTRAÇÃO],
+ESTADOS,
+TOTAL_USUARIOS AS USERS,
+PERIODO_DE_ACESSOS AS PERIODO,
+TIPO_DE_CONTA AS CONTA
+FROM tb_flix
+WHERE DATA IN('01/01/2019','03/01/2019','13/01/2019')
+
